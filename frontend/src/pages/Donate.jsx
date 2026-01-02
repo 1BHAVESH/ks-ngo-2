@@ -17,10 +17,10 @@ export default function DonatePage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-sage-light py-16">
+      <section className="bg-[#fff7f0] py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-forest text-center mb-6">
-            Support Our Cause
+          <h1 className="text-4xl md:text-5xl font-bold  text-center mb-6">
+            Support <span className="gradient-text">Our Cause</span>
           </h1>
           <p className="text-xl text-earth text-center max-w-3xl mx-auto">
             Your donation helps us rescue, feed, and care for cows in need
@@ -32,7 +32,7 @@ export default function DonatePage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Heart className="w-16 h-16 text-forest mx-auto mb-6" />
+            <Heart className="w-16 h-16 text-orange-500 mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-forest mb-6">
               Every Contribution Makes a Difference
             </h2>
