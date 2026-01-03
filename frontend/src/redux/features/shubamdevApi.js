@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { useGetBlogByIdQuery } from "./adminApi";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
 
@@ -66,6 +67,21 @@ export const shubhamDevApi = createApi({
       invalidatesTags: ["Career"],
     }),
 
+    getAllBlogs: builder.query({
+      query: () => ({
+         url: "/blog/get",
+         method: "GET"
+      })
+    }),
+
+    gettBlogById: builder.query({
+      query: (id) => ({
+        url: `blog/${id}`,
+        method: "GET",
+      })
+    })
+
+
     
   }),
 });
@@ -82,5 +98,6 @@ export const {
   useGetFaqQuery,
   useGetPrivacyPolicyQuery,
   useApplyForJobMutation,
-  
+  useGetAllBlogsQuery,
+  useGettBlogByIdQuery
 } = shubhamDevApi;

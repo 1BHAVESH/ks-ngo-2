@@ -7,73 +7,73 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import img1 from "../../public/brown-and-white-indian-gir-cow-in-sanctuary.jpg"
-import img2 from "../../public/peaceful-cow-grazing-in-green-pasture-indian-gaush.jpg"
-import img3 from "../../public/elderly-mixed-breed-cow-in-shelter.jpg"
 import { useGetBannersQuery } from "@/redux/features/adminApi";
 
-const API_URL=import.meta.env.VITE_API_URL ||" http://localhost:3001/"
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001/";
 
 export default function HeroImage() {
+  const { data, isLoading } = useGetBannersQuery();
 
-  const {data, isLoading} = useGetBannersQuery()
-  const slides = [
-    {
-      img: img1,
-      title: "Serving & Protecting Cows with Compassion",
-      text: "Join us in our mission to rescue, rehabilitate, and provide sanctuary for sacred cows in need."
-    },
-    {
-      img: img2,
-      title: "Your Support Saves Innocent Lives",
-      text: "Be a part of our journey to care for and protect abandoned cows."
-    },
-    {
-      img: img3,
-      title: "Adopt a Cow — Share Your Love",
-      text: "Give a cow the life she deserves by adopting and supporting her care."
-    },
-  ];
+  if (isLoading) return <h1>Please wait...</h1>;
 
-  console.log(data)
+  const bannerImages = data?.data?.map((cow) => cow.imageUrl);
 
-
-  if(isLoading) return <h1>please wait..</h1>
-
-  const bannerImages = data?.data?.map((cow) => cow.imageUrl)
-
-  console.log(bannerImages)
   return (
-    <section className="relative bg-[#f8f1e3] overflow-hidden">
+    <section className="bg-[#fbfdf5] py-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+        {/* LEFT CONTENT */}
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+            Protecting Our <span className="text-orange-500">Sacred Cows</span>
+            <br />
+            With Love & Care
+          </h1>
 
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 3500, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        loop
-        className="h-[420px] md:h-[500px]"
-      >
-        {bannerImages.map((s, i) => (
-          <SwiperSlide key={i}>
-            <div className="relative h-full">
-              
-              {/* BG IMAGE */}
-              <img
-                src={`${API_URL}${s}`}
-                className="w-full h-full object-cover"
-              />
+          <p className="text-gray-600 mt-4 text-lg">
+            Join us in our mission to rescue, protect, and provide shelter to
+            abandoned and injured cows. Every contribution makes a difference in
+            their lives.
+          </p>
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40" />
+          <div className="mt-6 flex gap-4">
+            <Button className="bg-orange-500 hover:bg-orange-600 cursor-pointer text-white rounded-full px-6">
+              Donate Now
+            </Button>
 
-              {/* CONTENT */}
-             
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            <Link to="/services">
+              <Button variant="outline" className="rounded-full px-6 cursor-pointer">
+                Our Services
+              </Button>
+            </Link>
+          </div>
+        </div>
 
+        {/* RIGHT SLIDER */}
+        <div className="relative">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{ delay: 3000 }}
+            pagination={{ clickable: true }}
+            loop
+            className="hero-swiper"
+          >
+            {bannerImages?.map((img, i) => (
+              <SwiperSlide key={i}>
+                <img
+                  src={`${API_URL}${img}`}
+                  className="w-full h-[420px] object-cover rounded-4xl"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* OVERLAY CARD */}
+          <div className="absolute bottom-6 left-6 bg-white shadow-xl rounded-2xl px-6 py-4">
+            <p className="text-2xl font-bold text-orange-500">500+</p>
+            <p className="text-gray-600 text-sm">Cows Rescued</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

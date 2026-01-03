@@ -1,11 +1,11 @@
-@font-face {
+/* @font-face {
   font-family: 'AlcuinBecker';
   src: url('./assets/font/alcuin-becker.ttf') format('truetype');
 }
 
 .font-alcuin {
   font-family: 'AlcuinBecker', sans-serif;
-}
+} */
 
 @import "tailwindcss";
 /* index.css */
@@ -17,6 +17,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -149,21 +150,28 @@
  */
 
  .swiper-pagination-bullet {
-  width: 10px !important;
-  height: 10px !important;
+  background: #ccc;
+  opacity: 1;
 }
 
-
-/* Pagination dots (default) */
-.swiper-pagination-bullet {
-  background-color: red !important;
-  /* border: 2px solid red !important; */
-}
-
-
-/* Active dot color */
 .swiper-pagination-bullet-active {
-  background: #ffd700 !important;   /* yellow (you can change) */
+  background: #ff7b00;
+}
+
+/* Default bullets */
+.hero-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255,255,255,0.6);
+  opacity: 1;
+  border-radius: 999px;
+  transition: all .3s ease;
+}
+
+/* ACTIVE pill shape */
+.hero-swiper .swiper-pagination-bullet-active {
+  width: 35px;
+  background: white;
 }
 
 /* .mySwiper .swiper-pagination-bullet-active {

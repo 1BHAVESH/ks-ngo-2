@@ -44,6 +44,11 @@ const navItems = [
     path: "/admin/get-enquiry",
     icon: MessageCircle
   },
+  {
+    name: "Blog",
+    path: "/admin/blog",
+    icon: Newspaper
+  }
   
   
 ];

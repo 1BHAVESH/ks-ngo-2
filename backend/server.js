@@ -22,6 +22,7 @@ import excelRoute from "./routes/excelEnquiryRote.js";
 import donateRoute from "./routes/DonateRoute.js"
 import cowRoute from "./routes/cowRoute.js"
 import bankRoute from "./routes/bankRoute.js"
+import blogRoute from "./routes/blogRoute.js"
 import { responseMiddleware } from "./middleware/response.js";
 
 dotenv.config();
@@ -70,6 +71,7 @@ app.use("/api/excel-enquiry", excelRoute);
 app.use("/api/donate", donateRoute)
 app.use("/api/cow-image", cowRoute)
 app.use("/api/bank", bankRoute)
+app.use("/api/blog", blogRoute)
 
 // ===============================
 // 🚀 NORMAL EXPRESS SERVER

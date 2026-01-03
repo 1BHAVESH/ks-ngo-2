@@ -37,6 +37,9 @@ import AdminDonation from "@/pages/admin/AdminDonation";
 import CowImageManagment from "@/pages/admin/ProjectManagement";
 import BankForm from "@/pages/admin/AdminBank";
 import InsideService from "@/pages/services/insideService";
+import Blog from "@/pages/Blog";
+import AdminBlog from "@/pages/admin/AdminBlog";
+import SingleBlog from "@/pages/SingleBlog";
 
 export default function AppRoutes() {
   return (
@@ -52,10 +55,10 @@ export default function AppRoutes() {
           <Route path="/gallery" element={<GalleryPage />} />
          
           <Route path="/contact" element={<ContactForm />} />
-          
+           <Route path="blog/:id" element={<SingleBlog />} />
           <Route path="/donate" element={<DonatePage />} />
-          
-          
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<SingleBlog />} />
           <Route path="/faq" element={<Faq />} />
           
          
@@ -79,6 +82,7 @@ export default function AppRoutes() {
           <Route path="genral-settings" element={<GeneralSettings />} />
           <Route path="profile" element={<Profile />} />
           <Route path="get-enquiry" element={<Enquiry />} />
+          <Route path="blog" element={<AdminBlog />} />
          
         </Route>
       </Routes>

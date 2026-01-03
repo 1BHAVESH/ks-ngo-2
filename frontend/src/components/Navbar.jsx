@@ -18,6 +18,7 @@ export default function Navbar() {
     { path: "/about", label: "About Us" },
     { path: "/services", label: "Services" },
     { path: "/donate", label: "Donate" },
+    {path: "/blog", label: "Blog"},
     { path: "/gallery", label: "Gallery" },
   ];
 

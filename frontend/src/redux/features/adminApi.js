@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { get } from "react-hook-form";
+import { url } from "zod";
 
 const API_URL = import.meta.env.VITE_API_URL || " http://localhost:3001/";
 
@@ -448,6 +449,40 @@ export const adminApi = createApi({
       }),
       invalidatesTags: ["testemoinal"],
     }),
+
+    getAllBlogs: builder.query({
+      query: () => ({
+         url: "/blog/get",
+         method: "GET"
+      })
+    }),
+
+    
+    getBlogById: builder.query({
+      query: (id) => ({
+         url: `/blog/${id}`,
+         method: "GET"
+      })
+    }),
+
+    createBlog: builder.mutation({
+      query: (formData) => {
+
+        return{
+          url: "/blog/create",
+          method: "POST",
+          body: formData
+        }
+      }
+    }),
+
+    updateBlog: builder.mutation({
+      query: ({formData, id}) => ({
+        url: `blog/update/${id}`,
+        method: "PUT",
+        body: formData
+      })
+    }),
     searchEnquiries: builder.query({
       query: (q) => ({
         url: `/excel-enquiry/search?q=${encodeURIComponent(q)}`,
@@ -509,5 +544,9 @@ export const {
   useAddTestimonialMutation,
   useGetTestimonialQuery,
   useUpdateTestimonialMutation,
-  useDeleteTestimonialMutation
+  useDeleteTestimonialMutation,
+  useGetAllBlogsQuery,
+  useCreateBlogMutation,
+  useGetBlogByIdQuery,
+  useUpdateBlogMutation
 } = adminApi;
