@@ -84,8 +84,14 @@ export const uploadTo = ({ dir = "uploads", isImage = false, isDoc = false, file
 // 🔥 DELETE FILE
 export const deleteOldImage = (req, res, next) => {
   try {
+
+    console.log("ELELELELELELELEL");
+    
     // multer ne abhi tak parse nahi kiya
     // isliye oldImage ko QUERY ya BODY dono jagah check karo
+
+    // console.log("KKKKKKKKKK", req.body);
+    
 
     const oldImage = req.body?.oldImage || req.query?.oldImage;
 

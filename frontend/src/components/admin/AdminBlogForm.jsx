@@ -7,6 +7,7 @@ import {
   useCreateBlogMutation,
    useUpdateBlogMutation,
 } from "@/redux/features/adminApi";
+import { toast } from "sonner";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001/";
 
@@ -18,7 +19,7 @@ const AdminBlogForm = ({ setCloseForm, blog }) => {
 
   console.log("0, 1", isEdit);
 
-  console.log(blog);
+  // console.log(blog);
   
   
 
@@ -66,12 +67,11 @@ const AdminBlogForm = ({ setCloseForm, blog }) => {
         formData.append("content", values.content);
 
         if (isEdit) {
-          await updateBlog({
-            id: blog._id,
-            formData,
-          }).unwrap();
+         const response =  await updateBlog({id: blog._id, formData}).unwrap();
 
-        console.log("pp")
+        console.log(response)
+
+        
 
           alert("Blog Updated Successfully 🎉");
         } else {
@@ -83,7 +83,12 @@ const AdminBlogForm = ({ setCloseForm, blog }) => {
 
       } catch (err) {
         console.log(err);
-        alert("Something went wrong ❌");
+
+        if(err?.data?.message == "File too large"){
+          toast.error("Image Size Must Be Under 5Mb")
+        }
+
+        // alert("Something went wrong ❌");
       }
     },
   });

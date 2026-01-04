@@ -17,7 +17,7 @@ export const adminApi = createApi({
       return headers;
     },
   }),
-  tagTypes: ["Admin", "Banner", "CowImage", "Career", "Faq", "Media", "Stats",  "testemoinal"],
+  tagTypes: ["Admin", "Banner", "CowImage", "Career", "Faq", "Media", "Stats",  "testemoinal", "Blog"],
   endpoints: (builder) => ({
     adminLogin: builder.mutation({
       query: (credentials) => ({
@@ -454,7 +454,9 @@ export const adminApi = createApi({
       query: () => ({
          url: "/blog/get",
          method: "GET"
-      })
+      }),
+      providesTags: ["Blog"]
+
     }),
 
     
@@ -473,7 +475,8 @@ export const adminApi = createApi({
           method: "POST",
           body: formData
         }
-      }
+      },
+      invalidatesTags: ["Blog"]
     }),
 
     updateBlog: builder.mutation({
@@ -481,7 +484,8 @@ export const adminApi = createApi({
         url: `blog/update/${id}`,
         method: "PUT",
         body: formData
-      })
+      }),
+      invalidatesTags: ["Blog"]
     }),
     searchEnquiries: builder.query({
       query: (q) => ({

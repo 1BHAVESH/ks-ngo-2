@@ -16,8 +16,8 @@ router.post(
 
 router.put(
   "/update/:id",
-  deleteOldImage("oldImage"),
   uploadBlogImage.single("image"),
+  deleteOldImage,
   editBlog
 );
 

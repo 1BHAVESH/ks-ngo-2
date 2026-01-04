@@ -124,14 +124,14 @@ export const editBlog = async (req, res) => {
 
         console.log("wwwwwwwwww")
 
-        const oldPath = path.join(process.cwd(), "uploads", "blogs", blog.image);
+        // const oldPath = path.join(process.cwd(), "uploads", "blogs", blog.image);
 
-        console.log("yyyyyyyyy", oldPath);
+        // console.log("yyyyyyyyy", oldPath);
         
 
-        if (fs.existsSync(oldPath)) {
-          fs.unlinkSync(oldPath);
-        }
+        // if (fs.existsSync(oldPath)) {
+        //   fs.unlinkSync(oldPath);
+        // }
       }
 
       // --- save new filename ---
