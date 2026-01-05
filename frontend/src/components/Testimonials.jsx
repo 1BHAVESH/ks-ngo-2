@@ -167,7 +167,7 @@ export default function Testimonials() {
                 key={i}
                 src={`${API_URL}${item.image}`}
                 alt="cow"
-                className="rounded-2xl object-cover h-44 w-full shadow-sm hover:shadow-lg transition"
+                className="rounded-2xl object-cover h-44 w-full md:h-[200px] md:w-[200px] shadow-sm hover:shadow-lg transition"
                 onClick={() =>
                     setSelectedImage({
                       image: item.image,

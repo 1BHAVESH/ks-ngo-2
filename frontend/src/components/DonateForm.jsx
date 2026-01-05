@@ -105,11 +105,11 @@ export default function DonationForm() {
 
   return (
     <div className="max-w-3xl mx-auto p-4">
-      <h2 className="text-3xl font-bold text-green-900 mb-2 text-center">Support Cow Seva</h2>
+      <h2 className="text-3xl font-bold text-[#4d8352] mb-2 text-center">Support Cow Seva</h2>
       <p className="text-green-800 text-center mb-8">Submit your donation with payment proof</p>
 
       <div className="bg-white p-8 rounded-lg shadow-lg border border-green-200">
-        <h3 className="text-2xl font-bold text-green-900 mb-6">Donation Details</h3>
+        <h3 className="text-2xl font-bold text-[#4d8352] mb-6">Donation Details</h3>
 
         {apiError && <p className="text-red-600 mb-4">{apiError}</p>}
 
@@ -236,7 +236,7 @@ export default function DonationForm() {
           <button
             onClick={handleSubmit}
             disabled={isLoading}
-            className="w-full bg-green-700 hover:bg-green-800 text-white py-3 text-lg font-semibold rounded-lg transition-colors disabled:opacity-60"
+            className="w-full bg-green-700 cursor-pointer hover:bg-green-800 text-white py-3 text-lg font-semibold rounded-lg transition-colors disabled:opacity-60"
           >
             {isLoading ? "Submitting..." : "Submit Donation"}
           </button>

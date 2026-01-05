@@ -8,10 +8,10 @@ import ContactForm from "@/pages/ContactPage";
 
 import ScrollToTop from "@/components/ScrollTop";
 
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
+// import PrivacyPolicy from "@/pages/PrivacyPolicy";
 
 
-import Faq from "@/pages/Faq";
+// import Faq from "@/pages/Faq";
 
 
 import AdminLogin from "@/pages/admin/AdminLogin";
@@ -23,7 +23,7 @@ import AdminLayout from "@/components/admin/AdminLayout";
 import HomePage from "@/components/admin/HomePage";
 
 
-import PolicyEditor from "@/pages/admin/PrivecyPolicy";
+// import PolicyEditor from "@/pages/admin/PrivecyPolicy";
 import GeneralSettings from "@/pages/admin/GenralSettings";
 import ProfileDropdown from "@/components/admin/AdminProfile";
 import Profile from "@/pages/admin/Profile";
@@ -59,7 +59,7 @@ export default function AppRoutes() {
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<SingleBlog />} />
-          <Route path="/faq" element={<Faq />} />
+          {/* <Route path="/faq" element={<Faq />} /> */}
           
          
          
@@ -78,7 +78,7 @@ export default function AppRoutes() {
           <Route path="cow-image" element={<CowImageManagment />} />
           <Route path="bank" element={<BankForm />} />
         
-          <Route path="privacy-policy" element={<PolicyEditor />} />
+          {/* <Route path="privacy-policy" element={<PolicyEditor />} /> */}
           <Route path="genral-settings" element={<GeneralSettings />} />
           <Route path="profile" element={<Profile />} />
           <Route path="get-enquiry" element={<Enquiry />} />

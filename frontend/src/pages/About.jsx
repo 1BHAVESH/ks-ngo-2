@@ -44,7 +44,7 @@ export default function AboutPage() {
       <section className="py-16 bg-[#fff]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold  mb-6">Who We Are</h2>
+            <h2 className="text-3xl font-bold text-[#4d8352] mb-6">Who We Are</h2>
             <div className="space-y-4 text-[#65504a] leading-relaxed text-lg">
               <p>
                 Cow Seva NGO was founded in 2013 by a group of passionate
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 <Target className="text-white w-6 h-6" />
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-2">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-2">
                 Our Mission
               </h3>
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
                 <Heart className="text-white w-6 h-6" />
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-2">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-2">
                 Our Vision
               </h3>
 
@@ -107,11 +107,11 @@ export default function AboutPage() {
                 <Award className="text-white w-6 h-6" />
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-2">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-2">
                 Our Values
               </h3>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 text-[#4d8352] leading-relaxed">
                 Compassion, integrity, transparency, dedication, and respect for
                 all living beings guide everything we do.
               </p>
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 <BookOpen className="text-white w-6 h-6" />
               </div>
 
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-2">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-2">
                 Our History
               </h3>
 
@@ -140,7 +140,7 @@ export default function AboutPage() {
       <section className="py-16 bg-[#fbfdf5]">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#0d3811] mb-6">
+            <h2 className="text-3xl font-bold text-[#4d8352] mb-6">
               Founder & Trust
             </h2>
             <div className="space-y-4 text-[#65504a] leading-relaxed text-lg">
@@ -165,7 +165,7 @@ export default function AboutPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           {/* HEADING */}
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1a2b1c] mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#4d8352] mb-12">
             The Importance of Cow Protection in India
           </h2>
 
@@ -173,7 +173,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {/* BLOCK 1 */}
             <div>
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-3">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-3">
                 Cultural Significance
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -186,7 +186,7 @@ export default function AboutPage() {
 
             {/* BLOCK 2 */}
             <div>
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-3">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-3">
                 Economic Value
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -199,7 +199,7 @@ export default function AboutPage() {
 
             {/* BLOCK 3 */}
             <div>
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-3">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-3">
                 Environmental Benefits
               </h3>
               <p className="text-gray-600 leading-relaxed">
@@ -211,7 +211,7 @@ export default function AboutPage() {
 
             {/* BLOCK 4 */}
             <div>
-              <h3 className="text-xl font-bold text-[#1a2b1c] mb-3">
+              <h3 className="text-xl font-bold text-[#4d8352] mb-3">
                 Ethical Responsibility
               </h3>
               <p className="text-gray-600 leading-relaxed">

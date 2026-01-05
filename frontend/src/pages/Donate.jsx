@@ -33,7 +33,7 @@ export default function DonatePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Heart className="w-16 h-16 text-orange-500 mx-auto mb-6" />
-            <h2 className="text-3xl font-bold text-forest mb-6">
+            <h2 className="text-3xl text-[#4d8352] font-bold mb-6">
               Every Contribution Makes a Difference
             </h2>
             <p className="text-earth leading-relaxed text-lg">
@@ -57,7 +57,7 @@ export default function DonatePage() {
 
               {/* Scan to Donate */}
               <Card className="p-8 border-sage">
-                <h3 className="text-2xl font-bold text-forest mb-6 text-center">
+                <h3 className="text-2xl font-bold text-[#4d8352]   mb-6 text-center">
                   Scan to Donate
                 </h3>
 

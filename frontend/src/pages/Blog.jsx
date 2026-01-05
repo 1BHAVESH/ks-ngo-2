@@ -41,7 +41,7 @@ const Blog = () => {
             <div
               key={blog._id}
               onClick={() => navigate(`/blog/${blog._id}`)}
-              className="bg-white rounded-3xl shadow-md overflow-hidden border"
+              className="bg-white rounded-3xl cursor-pointer shadow-md overflow-hidden border"
             >
 
               {/* IMAGE */}

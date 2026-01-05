@@ -115,7 +115,7 @@ const AdminBlogForm = ({ setCloseForm, blog }) => {
           onClick={() => setCloseForm(false)}
           className="absolute top-4 right-4 bg-white text-black 
           w-9 h-9 rounded-full font-bold shadow-xl z-10
-          flex items-center justify-center hover:bg-gray-200"
+          flex items-center cursor-pointer justify-center hover:bg-gray-200"
         >
           ✕
         </button>
@@ -232,7 +232,7 @@ const AdminBlogForm = ({ setCloseForm, blog }) => {
           type="submit"
           disabled={creating || updating}
           className="mt-6 w-full bg-gradient-to-r 
-          from-orange-500 to-yellow-400 text-black 
+          from-orange-500 to-yellow-400 text-black cursor-pointer
           font-semibold py-3 rounded-full shadow-lg
           hover:from-orange-600 hover:to-yellow-500 transition-all
           disabled:opacity-50 disabled:cursor-not-allowed"

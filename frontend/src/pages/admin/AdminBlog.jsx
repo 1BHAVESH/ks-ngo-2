@@ -29,7 +29,7 @@ const AdminBlog = () => {
 
         <button
           onClick={() => setOpenForm(true)}
-          className="bg-gradient-to-r from-orange-500 to-yellow-400 
+          className="bg-gradient-to-r cursor-pointer from-orange-500 to-yellow-400 
           text-black font-medium px-6 py-2 rounded-full shadow"
         >
           Add A Blog
@@ -69,14 +69,14 @@ const AdminBlog = () => {
                     setOpenForm(true);
                     setBlog(blog);
                   }}
-                  className="px-4 py-2 rounded-full bg-blue-500 text-white text-sm"
+                  className="px-4 py-2 cursor-pointer rounded-full bg-blue-500 text-white text-sm"
                 >
                   Edit
                 </button>
 
                 <button
                   onClick={() => alert("Delete Clicked")}
-                  className="px-4 py-2 rounded-full bg-red-500 text-white text-sm"
+                  className="px-4 py-2 cursor-pointer rounded-full bg-red-500 text-white text-sm"
                 >
                   Delete
                 </button>

@@ -24,15 +24,15 @@ export const shubhamDevApi = createApi({
       providesTags: ["CowImage"],
     }),
 
-    getProjectBySlug: builder.query({
-      query: (slug) => `/projects/slug/${slug}`,
-      providesTags: (r, e, slug) => [{ type: "Project", id: slug }],
-    }),
+    // getProjectBySlug: builder.query({
+    //   query: (slug) => `/projects/slug/${slug}`,
+    //   providesTags: (r, e, slug) => [{ type: "Project", id: slug }],
+    // }),
 
-    getProjectById: builder.query({
-      query: (id) => `/projects/${id}`,
-      providesTags: (r, e, id) => [{ type: "Project", id }],
-    }),
+    // getProjectById: builder.query({
+    //   query: (id) => `/projects/${id}`,
+    //   providesTags: (r, e, id) => [{ type: "Project", id }],
+    // }),
 
     getBankDetail: builder.query({
       query: () => ({
@@ -41,31 +41,31 @@ export const shubhamDevApi = createApi({
       }),
     }),
 
-    getProjectTitle: builder.query({
-      query: () => "/projects/get-title",
-    }),
+    // getProjectTitle: builder.query({
+    //   query: () => "/projects/get-title",
+    // }),
 
-    getJob: builder.query({
-      query: () => "/career/",
-      providesTags: ["Career"],
-    }),
+    // getJob: builder.query({
+    //   query: () => "/career/",
+    //   providesTags: ["Career"],
+    // }),
 
-    getFaq: builder.query({
-      query: () => "/faq/",
-    }),
+    // getFaq: builder.query({
+    //   query: () => "/faq/",
+    // }),
 
-    getPrivacyPolicy: builder.query({
-      query: () => "/privacy-policy",
-    }),
+    // getPrivacyPolicy: builder.query({
+    //   query: () => "/privacy-policy",
+    // }),
 
-    applyForJob: builder.mutation({
-      query: (jobData) => ({
-        url: "job-enquiry/apply",
-        method: "POST",
-        body: jobData,
-      }),
-      invalidatesTags: ["Career"],
-    }),
+    // applyForJob: builder.mutation({
+    //   query: (jobData) => ({
+    //     url: "job-enquiry/apply",
+    //     method: "POST",
+    //     body: jobData,
+    //   }),
+    //   invalidatesTags: ["Career"],
+    // }),
 
     getAllBlogs: builder.query({
       query: () => ({
@@ -90,14 +90,14 @@ export const {
   useEnquirySendMutation,
   useGetCowsQuery,
   useGetBankDetailQuery,
-  useGetProjectBySlugQuery,
-  useGetProjectByIdQuery,
+  // useGetProjectBySlugQuery,
+  // useGetProjectByIdQuery,
 
-  useGetProjectTitleQuery,
-  useGetJobQuery,
-  useGetFaqQuery,
-  useGetPrivacyPolicyQuery,
-  useApplyForJobMutation,
+  // useGetProjectTitleQuery,
+  // useGetJobQuery,
+  // useGetFaqQuery,
+  // useGetPrivacyPolicyQuery,
+  // useApplyForJobMutation,
   useGetAllBlogsQuery,
   useGettBlogByIdQuery
 } = shubhamDevApi;

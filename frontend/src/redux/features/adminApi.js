@@ -129,86 +129,8 @@ export const adminApi = createApi({
       }),
       invalidatesTags: ["CowImage"],
     }),
-    createJob: builder.mutation({
-      query: (body) => ({
-        url: "/career/create-job",
-        method: "POST",
-        body,
-      }),
-      invalidatesTags: ["Career"],
-    }),
-
-    getJob: builder.query({
-      query: () => ({
-        url: "/career/",
-        method: "GET",
-      }),
-      providesTags: ["Career"],
-    }),
-
-    updateJob: builder.mutation({
-      query: ({ id, ...data }) => {
-        console.log("UPDATE REQ:", id, data);
-
-        return {
-          url: `/career/${id}`,
-          method: "PUT",
-          body: data,
-        };
-      },
-      invalidatesTags: ["Career"],
-    }),
-
-    deleteCareer: builder.mutation({
-      query: (id) => ({
-        url: `/career/${id}`,
-        method: "DELETE",
-      }),
-      invalidatesTags: ["Career"],
-    }),
-
-    createFaq: builder.mutation({
-      query: (body) => ({
-        url: "/faq",
-        method: "POST",
-        body,
-      }),
-      invalidatesTags: ["Faq"],
-    }),
-
-    getFaq: builder.query({
-      query: () => ({
-        url: "/faq",
-        method: "GET",
-      }),
-      providesTags: ["Faq"],
-    }),
-
-    faqUpdate: builder.mutation({
-      query: ({ id, ...formData }) => ({
-        url: `/faq/${id}`,
-        method: "PUT",
-        body: formData,
-      }),
-      invalidatesTags: ["Faq"],
-    }),
-
-    deleteFaq: builder.mutation({
-      query: ({ id }) => {
-        return {
-          url: `faq/${id}`,
-          method: "DELETE",
-        };
-      },
-      invalidatesTags: ["Faq"],
-    }),
-    toggleProject: builder.mutation({
-      query: (id) => ({
-        url: `/projects/toggle/${id}`,
-        method: "PATCH",
-      }),
-      invalidatesTags: ["Project"],
-    }),
+  
+    
     getViewAnalytics: builder.query({
       query: () => "/view/get-view-count",
     }),
@@ -248,76 +170,8 @@ export const adminApi = createApi({
       invalidatesTags: ["Career"],
     }),
 
-    getApplications: builder.query({
-      query: () => ({
-        url: "job-enquiry/applications",
-        method: "GET",
-      }),
-      providesTags: ["Career"],
-    }),
-
-    deleteAllApplications: builder.mutation({
-      query: () => {
-        console.log("🔥 deleteAllApplications API called");
-
-        return {
-          url: "/job-enquiry/delete-all-applications",
-          method: "DELETE",
-        };
-      },
-      invalidatesTags: ["Career"],
-    }),
-
-    deleteJobBYId: builder.mutation({
-      query: (id) => ({
-        url: `job-enquiry/applications/${id}`,
-        method: "DELETE",
-      }),
-      invalidatesTags: ["Career"],
-    }),
-
-    getAllPosts: builder.query({
-      query: (params) => ({
-        url: "/media/get-all-media-posts",
-        method: "GET",
-        params, // 🔥 yahin se query string jayegi
-      }),
-      providesTags: ["Media"],
-    }),
-
-    createMediaPostMutation: builder.mutation({
-      query: (formData) => ({
-        url: "/media/create-post",
-        method: "POST",
-        body: formData,
-      }),
-      invalidatesTags: ["Media"],
-    }),
-
-    updateMediaPost: builder.mutation({
-      query: ({ id, data }) => ({
-        url: `/media/update-post/${id}`,
-        method: "PUT",
-        body: data,
-      }),
-      invalidatesTags: ["Media"],
-    }),
-
-    toggleMediaPostStatus: builder.mutation({
-      query: (id) => ({
-        url: `/media/toogle-media-staus/${id}`,
-        method: "PATCH",
-      }),
-      invalidatesTags: ["Media"],
-    }),
-
-    deleteMediaPost: builder.mutation({
-      query: (id) => ({
-        url: `/media/delete-post/${id}`,
-        method: "DELETE",
-      }),
-      invalidatesTags: ["Media"],
-    }),
+   
+   
     excelImportEnquiries: builder.mutation({
       query: (file) => {
         const formData = new FormData();
@@ -511,29 +365,15 @@ export const {
   useUpdateCowImageMutation,
   useDeleteCowMutation,
   useToggleCowMutation,
-  useCreateJobMutation,
-  useGetJobQuery,
-  useUpdateJobMutation,
-  useDeleteCareerMutation,
-  useCreateFaqMutation,
-  useGetFaqQuery,
-  useFaqUpdateMutation,
-  useDeleteFaqMutation,
+ 
   useGetAdminSideBannerQuery,
-  useToggleProjectMutation,
+ 
   useGetViewAnalyticsQuery,
   useCreateGeneralSettingMutation,
   useGetGeneralSettingQueryQuery,
   useGetAllEnquiryQuery,
   useDeleteEnquiryMutation,
-  useDeleteJobBYIdMutation,
-  useGetApplicationsQuery,
-  useDeleteAllApplicationsMutation,
-  useGetAllPostsQuery,
-  useCreateMediaPostMutationMutation,
-  useUpdateMediaPostMutation,
-  useDeleteMediaPostMutation,
-  useToggleMediaPostStatusMutation,
+
   useExcelImportEnquiriesMutation,
   useGetExcelEnquiriesQuery,
   useSendDonateMutation,
